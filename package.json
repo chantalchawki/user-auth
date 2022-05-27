@@ -1,0 +1,29 @@
+{
+  "name": "user-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "migrate": "node migration.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chantalchawki/user-auth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chantalchawki/user-auth/issues"
+  },
+  "homepage": "https://github.com/chantalchawki/user-auth#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^7.1.0",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.4"
+  }
+}
