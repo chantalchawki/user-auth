@@ -4,11 +4,12 @@ const { logger } = require('./logger');
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.DATABASE_URL);
+    const url = process.env.DATABASE_URL || 'mongodb://database:27017/user-auth';
+    await mongoose.connect(url);
     await migration.generateUsers();
     logger.info('Connected to database');
   } catch (err) {
-    logger.error('Error connecting to database', err);
+    logger.error(`Error connecting to database ${err}`);
   }
 };
 

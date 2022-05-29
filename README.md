@@ -2,15 +2,33 @@
 
 ## Run:
 
-To run the docker-compose.yaml file:
+To run the docker-compose.yaml file (production environment):
 ```bash
 docker-compose up -d
+```
+To run the docker-compose.dev.yaml file (development environment):
+```bash
+docker compose -f "docker-compose.dev.yaml" up -d
 ```
 
 To view logs:
 ```bash
 docker-compose logs -f server
 ```
+
+To run the migration:
+```bash
+npm run migrate
+```
+
+To test the login:
+"User" account
+Username: Romaine_Hettinger
+Password: Test123
+
+"Admin" account
+Username: Amelia_Marks
+Password: Test123
 
 ## Endpoints:
 

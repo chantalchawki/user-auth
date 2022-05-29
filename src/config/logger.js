@@ -11,7 +11,7 @@ const rTracerFormat = printf((info) => {
 });
 
 const logger = createLogger({
-  level: process.env.LOG_LEVEL,
+  level: process.env.LOG_LEVEL || 'info',
   format: combine(
     timestamp(),
     rTracerFormat,
